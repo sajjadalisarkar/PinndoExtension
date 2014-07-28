@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+        #content_wrap {
+            width: 170px;
+            height :550px;
+            background-color :#004c7e;
+        }
+        #bar_logo_area {
+            margin-left: auto;
+            margin-right: auto;
+            width: 150px;
+            height: 32px;
+            vertical-align: middle;
+        }
+        #logo{
+            position: relative;
+            height: 20px;
+            width: 70px;
+            left: 50%;
+            margin-left: -35px;
+            margin-top: 5px;
+        }
+        #dropping_area{
+            margin-left: auto;
+            margin-right: auto;
+            background-color : #e6e6e6 ;
+            height: 70px;
+            width: 155px;
+        }
+        #add_logo {
+            width: 30px;
+            height: 30px;
+        }
+        #add_logo img{
+            width: 30px;
+            height: 30px;
+            margin-left:62.5px;
+            margin-top:2px;
+        }
+        #add_text {
+            height: 40px;
+            font-family: Avenir;
+            color: #004c7e;
+            text-align: center;
+            font-size: 14px;
+        }
+        #items{
+            overflow-y:auto;
+            margin-left:2px;
+            margin-top:6px;
+            margin-bottom:6px;
+            height :410px;
+            width: 160px;
+
+        }
+        #items::-webkit-scrollbar {
+            width: 7px;
+            background-color:#e6e6e6 ;
+            border-radius: 10px;
+        }
+
+        #items::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color:#004c7e ;
+        }
+        #items .item{
+            margin-top: 6px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 144px;
+            background-color : #e6e6e6 ;
+        }
+        .content{
+
+            height: 70px;
+        }
+        .content img {
+            height: 58px;
+            width: 124px;
+            border: 2px solid #000000;
+            margin-left:8px;
+            margin-top:3px;
+        }
+        .website_name{
+            font-family: Avenir;
+            font-size: 12px;
+            margin-top: -6px;
+            margin-left: 8px ;
+        }
+        .Add_note_button{
+            float: left;
+            font-family: Avenir;
+            font-size: 10px;
+            color: #004c7e;
+            margin-top: 4px;
+            margin-left: 8px ;
+        }
+        .Save_note_button{
+            float: left;
+            font-family: Avenir;
+            font-size: 10px;
+            color: #05a25f;
+            margin-top: 4px;
+            margin-left: 8px ;
+        }
+        .Note_block{
+            margin-top: 4px;
+            margin-left: 8px ;
+            margin-bottom: 4px ;
+            border: 0px;
+            border-radius: 5px;
+            height:40px;
+            width: 124px;
+            font-family: Avenir;
+            font-size: 10px;
+
+
+        }
+        .text_content{
+            height: 50px;
+            width: 124px;
+            border: 1px solid #808080;
+            padding-top: 5px;
+            margin-left:8px;
+            margin-top:4px;
+            display: inline-block;
+            font-family: Avenir;
+            font-size: 10px;
+            word-wrap: normal;
+            overflow: hidden;
+            text-align: center;
+            line-height:12px;
+
+        }
+        .text_content text {
+
+        }
+        .Bin img
+        {
+            float: right;
+            width: 15px;
+            height: 15px;
+            margin-right: 10px ;
+        }
+        .clear{
+            clear: both;
+        }
+
+        #save {
+            height :25px;
+        }
+        #save_button {
+            margin-left: auto;
+            margin-right: auto;
+            height: 23px;
+            width: 140px;
+            font-family: Avenir;
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            line-height:23px;
+            background-color :#05a25f;
+        }
+        @font-face {
+            font-family:"Avenir" ;
+            src: url(Avenir.ttc);
+        }
+    </style>
+</head>
+<body>
+<div id="content_wrap">
+    <div id="bar_logo_area">
+        <img id="logo" src="logo_pinndo_white.png"/>
+    </div>
+    <div id="dropping_area">
+        <div id="add_logo"><img src="add.png"/></div>
+        <div id="add_text">Ajouter:<br>lien, texte,image,video</div>
+    </div>
+    <div id="items">
+        <div id="item1" class="item">
+            <div class="content">
+                <img  src="content_img2.png"/>
+            </div>
+            <div class="website_name">
+                www.cotemasion.fr
+            </div>
+            <div class="Add_note_button">
+                AJOUTER UNE NOTE
+            </div>
+            <div class="Bin">
+                <img  src="rubbish.png"/>
+            </div>
+            <br class="clear">
+        </div>
+        <div id="item2" class="item">
+            <div class="content">
+                <img  src="content_img1.png"/>
+            </div>
+            <div class="website_name">
+                www.cotemasion.fr
+            </div>
+            <div class="Save_note_button">
+                VALIDER LA NOTE
+            </div>
+            <div class="Bin">
+                <img  src="rubbish.png"/>
+            </div>
+            <br class="clear">
+            <textarea class="Note_block"type="text"></textarea>
+        </div>
+        <div id="item3" class="item">
+            <div class="content">
+                <div class="text_content">
+                    In a first-of-its-kind action, the Directorate General of Civil Aviation (DGCA) has directed SpiceJet to refund fares to all passengers of a Mumbai-Delhi flight that was delayed by about five hours last month, officials said on Monday.
+                </div>
+            </div>
+            <div class="website_name">
+                www.cotemasion.fr
+            </div>
+            <div class="Add_note_button">
+                AJOUTER UNE NOTE
+            </div>
+            <div class="Bin">
+                <img  src="rubbish.png"/>
+            </div>
+            <br class="clear">
+        </div>
+        <div id="item4" class="item">
+            <div class="content">
+                <img  src="content_img2.png"/>
+            </div>
+            <div class="website_name">
+                www.cotemasion.fr
+            </div>
+            <div class="Add_note_button">
+                AJOUTER UNE NOTE
+            </div>
+            <div class="Bin">
+                <img  src="rubbish.png"/>
+            </div>
+            <br class="clear">
+        </div>
+        <div id="item5" class="item">
+            <div class="content">
+                <img  src="content_img1.png"/>
+            </div>
+            <div class="website_name">
+                www.cotemasion.fr
+            </div>
+            <div class="Add_note_button">
+                AJOUTER UNE NOTE
+            </div>
+            <div class="Bin">
+                <img  src="rubbish.png"/>
+            </div>
+            <br class="clear">
+        </div>
+    </div>
+    <div id="save">
+        <div id="save_button">Enregister mes recherches</div>
+    </div>
+</div>
+</body>
+</html>
+
