@@ -186,6 +186,44 @@
         <div id="save_button">Enregister mes recherches</div>
     </div>
 </div>
+<script src="jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+
+    $("#add_logo").on('click',createImageContent);
+    $("#add_logo").on('dblclick',createTextContent);
+    $("#items").on('click','.Bin',removeImageContent);
+    $("#items").on('click','.Add_note_button',showNoteBlock);
+    $("#items").on('click','.Save_note_button',hideNoteBlock);
+
+    function createImageContent(){
+        $("#items").append('<div class="item"><div class="content"><img  src="content_img1.png"/></div><div class="website_name">www.cotemasion.fr</div><div><div class="Add_note_button">AJOUTER UNE NOTE</div><div id="bin" class="Bin"><img  src="rubbish.png"/></div><br class="clear"></div></div>');
+    };
+    function createTextContent(){
+        $("#items").append('<div id="item3" class="item"><div class="content"><div class="text_content"></div></div><div class="website_name">www.cotemasion.fr</div><div class="Add_note_button">AJOUTER UNE NOTE</div><div class="Bin"><img  src="rubbish.png"/></div><br class="clear"></div>');
+    };
+
+    function removeImageContent() {
+        $(this).parent().parent().remove();
+    }
+    function hideNoteBlock() {
+        $(this).siblings(".Note_block").data('Note_block_Data', $(this).siblings(".Note_block").val() );
+        $(this).siblings(".Note_block").slideUp();
+        $(this).replaceWith('<div class="Add_note_button">AJOUTER UNE NOTE</div>');
+    }
+    function showNoteBlock() {
+        if($(this).siblings(".Note_block").length === 0) {
+            var innerHtml = '<textarea class="Note_block"type="text"></textarea>';
+            $(innerHtml).hide().appendTo($(this).parent()).slideDown();
+            $(this).replaceWith('<div class="Save_note_button">VALIDER LA NOTE</div>');
+        }
+        else
+        {
+            $(this).siblings(".Note_block").slideDown();
+            $(this).replaceWith('<div class="Save_note_button">VALIDER LA NOTE</div>');
+            $(this).siblings(".Note_block").val($(this).siblings(".Note_block").data("Note_block_Data"));
+        }
+    }
+    </script>
 </body>
 </html>
 
