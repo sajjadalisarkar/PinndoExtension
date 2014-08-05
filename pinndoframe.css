@@ -1,0 +1,176 @@
+#pinndo_frame
+{
+    width: 210px;
+    height :580px;
+}
+#close_button{
+    height: 15px;
+}
+#close_button_img{
+    width: 15px;
+    height: 15px;
+    margin-right:2px;
+    float: right;
+    display: none;
+}
+#content_wrap {
+    background-color :#004c7e;
+    border-radius: 4px;
+}
+#bar_logo_area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 32px;
+    vertical-align: middle;
+}
+#logo{
+    position: relative;
+    height: 23px;
+    width: 74px;
+    left: 50%;
+    margin-left: -35px;
+    margin-top: 7px;
+}
+#dropping_area{
+    margin-left:10px;
+    margin-top:6px;
+    margin-bottom:6px;
+    background-color : #e6e6e6 ;
+    height: 75px;
+    width: 170px;
+    border-radius: 2px;
+}
+
+#add_logo img{
+    width: 30px;
+    height: 30px;
+    margin-left:70px;
+    margin-top:2px;
+}
+#add_text {
+    height: 40px;
+    font-family: Avenir;
+    color: #004c7e;
+    text-align: center;
+    font-size: 14px;
+}
+#items{
+    overflow-y:auto;
+    margin-left:10px;
+    margin-top:6px;
+    margin-bottom:6px;
+    height :410px;
+    width: 190px;
+
+}
+#items::-webkit-scrollbar {
+    width: 7px;
+    background-color:#e6e6e6 ;
+    border-radius: 10px;
+}
+
+#items::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color:#004c7e ;
+}
+#items .item{
+    margin-top: 6px;
+    width: 170px;
+    background-color : #e6e6e6 ;
+    border-radius: 2px;
+}
+.content{
+
+    height: 70px;
+}
+.content img {
+    height: 58px;
+    width: 150px;
+    border: 2px solid #000000;
+    margin-left:8px;
+    margin-top:3px;
+}
+.website_name{
+    font-family: Avenir;
+    font-size: 12px;
+    margin-top: -6px;
+    margin-left: 8px ;
+}
+.Add_note_button{
+    float: left;
+    font-family: Avenir;
+    font-size: 10px;
+    color: #004c7e;
+    margin-top: 4px;
+    margin-left: 8px ;
+}
+.Save_note_button{
+    float: left;
+    font-family: Avenir;
+    font-size: 10px;
+    color: #05a25f;
+    margin-top: 4px;
+    margin-left: 8px ;
+}
+.Note_block{
+    margin-top: 4px;
+    margin-left: 8px ;
+    margin-bottom: 4px ;
+    border: 0px;
+    border-radius: 5px;
+    height:50px;
+    width: 150px;
+    font-family: Avenir;
+    font-size: 10px;
+    max-width: 150px;
+    max-height: 50px;
+}
+.text_content{
+    height: 50px;
+    width: 124px;
+    border: 1px solid #808080;
+    padding-top: 5px;
+    margin-left:8px;
+    margin-top:4px;
+    display: inline-block;
+    font-family: Avenir;
+    font-size: 10px;
+    word-wrap: normal;
+    overflow: hidden;
+    text-align: center;
+    line-height:12px;
+
+}
+.text_content text {
+
+}
+.Bin img
+{
+    float: right;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px ;
+}
+.clear{
+    clear: both;
+}
+
+#save {
+    height :29px;
+}
+#save_button {
+    margin-left: auto;
+    margin-right: auto;
+    height: 23px;
+    width: 140px;
+    font-family: Avenir;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    line-height:23px;
+    background-color :#05a25f;
+}
+@font-face {
+    font-family:Avenir ; src: url(Avenir.ttc);
+}

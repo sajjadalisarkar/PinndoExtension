@@ -1,183 +1,21 @@
 <!doctype html>
-<html>
 <head>
     <title>Getting Started Extension's Popup</title>
-    <style>
-        #content_wrap {
-            width: 170px;
-            height :550px;
-            background-color :#004c7e;
-        }
-        #bar_logo_area {
-            margin-left: auto;
-            margin-right: auto;
-            width: 150px;
-            height: 32px;
-            vertical-align: middle;
-        }
-        #logo{
-            position: relative;
-            height: 20px;
-            width: 70px;
-            left: 50%;
-            margin-left: -35px;
-            margin-top: 5px;
-        }
-        #dropping_area{
-            margin-left: auto;
-            margin-right: auto;
-            background-color : #e6e6e6 ;
-            height: 70px;
-            width: 155px;
-        }
-        #add_logo {
-            width: 30px;
-            height: 30px;
-        }
-        #add_logo img{
-            width: 30px;
-            height: 30px;
-            margin-left:62.5px;
-            margin-top:2px;
-        }
-        #add_text {
-            height: 40px;
-            font-family: Avenir;
-            color: #004c7e;
-            text-align: center;
-            font-size: 14px;
-        }
-        #items{
-            overflow-y:auto;
-            margin-left:2px;
-            margin-top:6px;
-            margin-bottom:6px;
-            height :410px;
-            width: 160px;
+    <link type="text/css" rel="stylesheet" href="pinndoframe.css">
 
-        }
-        #items::-webkit-scrollbar {
-            width: 7px;
-            background-color:#e6e6e6 ;
-            border-radius: 10px;
-        }
-
-        #items::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background-color:#004c7e ;
-        }
-        #items .item{
-            margin-top: 6px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 144px;
-            background-color : #e6e6e6 ;
-        }
-        .content{
-
-            height: 70px;
-        }
-        .content img {
-            height: 58px;
-            width: 124px;
-            border: 2px solid #000000;
-            margin-left:8px;
-            margin-top:3px;
-        }
-        .website_name{
-            font-family: Avenir;
-            font-size: 12px;
-            margin-top: -6px;
-            margin-left: 8px ;
-        }
-        .Add_note_button{
-            float: left;
-            font-family: Avenir;
-            font-size: 10px;
-            color: #004c7e;
-            margin-top: 4px;
-            margin-left: 8px ;
-        }
-        .Save_note_button{
-            float: left;
-            font-family: Avenir;
-            font-size: 10px;
-            color: #05a25f;
-            margin-top: 4px;
-            margin-left: 8px ;
-        }
-        .Note_block{
-            margin-top: 4px;
-            margin-left: 8px ;
-            margin-bottom: 4px ;
-            border: 0px;
-            border-radius: 5px;
-            height:40px;
-            width: 124px;
-            font-family: Avenir;
-            font-size: 10px;
-
-
-        }
-        .text_content{
-            height: 50px;
-            width: 124px;
-            border: 1px solid #808080;
-            padding-top: 5px;
-            margin-left:8px;
-            margin-top:4px;
-            display: inline-block;
-            font-family: Avenir;
-            font-size: 10px;
-            word-wrap: normal;
-            overflow: hidden;
-            text-align: center;
-            line-height:12px;
-
-        }
-        .text_content text {
-
-        }
-        .Bin img
-        {
-            float: right;
-            width: 15px;
-            height: 15px;
-            margin-right: 10px ;
-        }
-        .clear{
-            clear: both;
-        }
-
-        #save {
-            height :25px;
-        }
-        #save_button {
-            margin-left: auto;
-            margin-right: auto;
-            height: 23px;
-            width: 140px;
-            font-family: Avenir;
-            font-size: 12px;
-            color: #ffffff;
-            text-align: center;
-            line-height:23px;
-            background-color :#05a25f;
-        }
-        @font-face {
-            font-family:"Avenir" ;
-            src: url(Avenir.ttc);
-        }
-    </style>
 </head>
 <body>
+<div id="pinndo_frame">
+    <div id="close_button">
+        <img id="close_button_img" src="cross.png"/>
+    </div>
 <div id="content_wrap">
     <div id="bar_logo_area">
         <img id="logo" src="logo_pinndo_white.png"/>
     </div>
     <div id="dropping_area">
         <div id="add_logo"><img src="add.png"/></div>
-        <div id="add_text">Ajouter:<br>lien, texte,image,video</div>
+        <div id="add_text">Ajouter:<br>lien,texte,image,video</div>
     </div>
     <div id="items">
 
@@ -186,44 +24,9 @@
         <div id="save_button">Enregister mes recherches</div>
     </div>
 </div>
+</div>
 <script src="jquery-2.1.1.min.js"></script>
-<script type="text/javascript">
-
-    $("#add_logo").on('click',createImageContent);
-    $("#add_logo").on('dblclick',createTextContent);
-    $("#items").on('click','.Bin',removeImageContent);
-    $("#items").on('click','.Add_note_button',showNoteBlock);
-    $("#items").on('click','.Save_note_button',hideNoteBlock);
-
-    function createImageContent(){
-        $("#items").append('<div class="item"><div class="content"><img  src="content_img1.png"/></div><div class="website_name">www.cotemasion.fr</div><div><div class="Add_note_button">AJOUTER UNE NOTE</div><div id="bin" class="Bin"><img  src="rubbish.png"/></div><br class="clear"></div></div>');
-    };
-    function createTextContent(){
-        $("#items").append('<div id="item3" class="item"><div class="content"><div class="text_content"></div></div><div class="website_name">www.cotemasion.fr</div><div class="Add_note_button">AJOUTER UNE NOTE</div><div class="Bin"><img  src="rubbish.png"/></div><br class="clear"></div>');
-    };
-
-    function removeImageContent() {
-        $(this).parent().parent().remove();
-    }
-    function hideNoteBlock() {
-        $(this).siblings(".Note_block").data('Note_block_Data', $(this).siblings(".Note_block").val() );
-        $(this).siblings(".Note_block").slideUp();
-        $(this).replaceWith('<div class="Add_note_button">AJOUTER UNE NOTE</div>');
-    }
-    function showNoteBlock() {
-        if($(this).siblings(".Note_block").length === 0) {
-            var innerHtml = '<textarea class="Note_block"type="text"></textarea>';
-            $(innerHtml).hide().appendTo($(this).parent()).slideDown();
-            $(this).replaceWith('<div class="Save_note_button">VALIDER LA NOTE</div>');
-        }
-        else
-        {
-            $(this).siblings(".Note_block").slideDown();
-            $(this).replaceWith('<div class="Save_note_button">VALIDER LA NOTE</div>');
-            $(this).siblings(".Note_block").val($(this).siblings(".Note_block").data("Note_block_Data"));
-        }
-    }
-    </script>
+<script src="Script.js"></script>
 </body>
 </html>
 
