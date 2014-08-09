@@ -1,5 +1,4 @@
-#pinndo_frame
-{
+#pinndo_frame{
     width: 210px;
     height :580px;
 }
@@ -13,11 +12,11 @@
     float: right;
     display: none;
 }
-#content_wrap {
+#content_wrap{
     background-color :#004c7e;
     border-radius: 4px;
 }
-#bar_logo_area {
+#bar_logo_area{
     margin-left: auto;
     margin-right: auto;
     width: 150px;
@@ -48,7 +47,7 @@
     margin-left:70px;
     margin-top:2px;
 }
-#add_text {
+#add_text{
     height: 40px;
     font-family: Avenir;
     color: #004c7e;
@@ -64,13 +63,13 @@
     width: 190px;
 
 }
-#items::-webkit-scrollbar {
+#items::-webkit-scrollbar{
     width: 7px;
     background-color:#e6e6e6 ;
     border-radius: 10px;
 }
 
-#items::-webkit-scrollbar-thumb {
+#items::-webkit-scrollbar-thumb{
     border-radius: 10px;
     background-color:#004c7e ;
 }
@@ -84,34 +83,43 @@
 
     height: 70px;
 }
-.content img {
+.content .image{
     height: 58px;
     width: 150px;
     border: 2px solid #000000;
     margin-left:8px;
     margin-top:3px;
 }
+.content .favicon{
+    height: 45px;
+    width: 45px;
+    border: none;
+    margin-left:60px;
+    margin-top:9px;
+}
 .website_name{
     font-family: Avenir;
     font-size: 12px;
-    margin-top: -6px;
-    margin-left: 8px ;
+    margin-top: -3px;
+    margin-left: 12px ;
 }
 .Add_note_button{
     float: left;
     font-family: Avenir;
     font-size: 10px;
+    font-weight: 500;
     color: #004c7e;
     margin-top: 4px;
-    margin-left: 8px ;
+    margin-left: 12px ;
 }
 .Save_note_button{
     float: left;
     font-family: Avenir;
     font-size: 10px;
+    font-weight: 500;
     color: #05a25f;
     margin-top: 4px;
-    margin-left: 8px ;
+    margin-left: 12px ;
 }
 .Note_block{
     margin-top: 4px;
@@ -127,26 +135,23 @@
     max-height: 50px;
 }
 .text_content{
-    height: 50px;
-    width: 124px;
+    max-height: 55px;
+    width: 150px;
     border: 1px solid #808080;
-    padding-top: 5px;
-    margin-left:8px;
+    margin-left:5px;
     margin-top:4px;
     display: inline-block;
     font-family: Avenir;
     font-size: 10px;
     word-wrap: normal;
     overflow: hidden;
-    text-align: center;
-    line-height:12px;
-
+    text-align: left;
+    line-height:14px;
+    border-collapse:separate;
+    padding: 3pt;
 }
-.text_content text {
 
-}
-.Bin img
-{
+.Bin img{
     float: right;
     width: 15px;
     height: 15px;
@@ -156,10 +161,10 @@
     clear: both;
 }
 
-#save {
+#save{
     height :29px;
 }
-#save_button {
+#save_button{
     margin-left: auto;
     margin-right: auto;
     height: 23px;
@@ -171,6 +176,6 @@
     line-height:23px;
     background-color :#05a25f;
 }
-@font-face {
+@font-face{
     font-family:Avenir ; src: url(Avenir.ttc);
 }
